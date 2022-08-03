@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Http\Controllers\Storage;
+use App\Http\Requests\StoreUpdateForm;
 
 
 class ProductController extends Controller
@@ -37,6 +38,17 @@ class ProductController extends Controller
     {
   
       $data = $request->all();
+
+      /*$data = $request->all();
+
+    $file = $request['image_products'];
+    $path = $file->store('itens', 'public');
+    $data['image_products'] = $path;
+
+    $this->model->create($data);*/
+
+    //return redirect()->route('admin.product.productCreate')->with('success', 'Produto cadastrado com sucesso!');
+
   
 
   

@@ -8,7 +8,32 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light btn-sm bg-light">
+  <a class="navbar-brand" href="{{ route('product.index')}}">Produtos</a>
+<div class="col-2">
+  
+    <ul class="navbar-nav mr-auto ">
+      @if(Auth::user())
+        <li class="nav-item">
+          <a class="nav-link text-black" href="#">Jóse</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black" href="#">Sair</a>
+        </li>
 
+      @else
+        <li class="nav-item">
+          <a class="nav-link text-black" href="#">Entrar</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link text-black" href="#">Cadastrar</a>
+        </li> 
+        
+      @endif 
+    </ul>
+  
+</div> 
+</nav>
 <div class="container">
     @yield('body')
 </div>

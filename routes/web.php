@@ -10,7 +10,7 @@ use App\Http\Controllers\{
   Route::get('/', function(){
     return view('welcome');
   });
-
+  //Route::midleware(['auth'])->group(function () {})
   Route::delete('/product/{id}', [ProductController::class, 'destroy'])->name('product.destroy');
   Route::put('/product/{id}', [ProductController::class, 'update'])->name('product.update');
   Route::get('/product/{id}/edit', [ProductController::class, 'edit'])->name('product.edit');
